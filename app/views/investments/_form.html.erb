@@ -12,12 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :investor_id %><br>
-    <%= f.number_field :investor_id %>
+    <%= f.select :investor_id, Investor.all.collect { |i| [ i.full_name, i.id ] } %>
   </div>
   <div class="field">
-    <%= f.label :fund_id %><br>
-    <%= f.number_field :fund_id %>
+    <%= f.select :fund_id, Fund.all.collect { |fund| [ fund.name, fund.id ] } %>
   </div>
   <div class="actions">
     <%= f.submit %>
