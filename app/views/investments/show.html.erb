@@ -2,12 +2,12 @@
 
 <p>
   <strong>Investor:</strong>
-  <%= @investment.investor_id %>
+  <%= @investment.investor.full_name %>
 </p>
 
 <p>
   <strong>Fund:</strong>
-  <%= @investment.fund_id %>
+  <%= @investment.fund.name %>
 </p>
 
 <%= link_to 'Edit', edit_investment_path(@investment) %> |
