@@ -12,8 +12,8 @@
   <tbody>
     <% @investments.each do |investment| %>
       <tr>
-        <td><%= investment.investor_id %></td>
-        <td><%= investment.fund_id %></td>
+        <td><%= investment.investor.full_name %></td>
+        <td><%= investment.fund.name %></td>
         <td><%= link_to 'Show', investment %></td>
         <td><%= link_to 'Edit', edit_investment_path(investment) %></td>
         <td><%= link_to 'Destroy', investment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,3 +25,5 @@
 <br>
 
 <%= link_to 'New Investment', new_investment_path %>
+<%= link_to 'New Investor', new_investor_path %>
+<%= link_to 'New Fund', new_fund_path %>
